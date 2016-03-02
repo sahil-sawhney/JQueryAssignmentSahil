@@ -1,0 +1,33 @@
+package com.knoldus.service
+
+import akka.actor.ActorSystem
+import akka.http.scaladsl.Http
+
+import akka.stream.ActorMaterializer
+import com.knoldus.repo.repo.{StudentRepository, Student}
+
+//import scala.concurrent.ExecutionContext.Implicits.global
+
+
+object HttpService extends App with Routes with FakeRepo {
+
+  implicit val system = ActorSystem()
+  implicit val materializer = ActorMaterializer()
+
+  Http().bindAndHandle(route, "localhost", 9000)
+
+
+
+}
+
+trait FakeRepo extends StudentRepository {
+
+  val studentResultList:List[Student]=Nill
+
+  def create(student:Student):Student=Student(2,"sky", "sky@knoldus.com")
+
+  def getById(id:Int):Student =Student(1, "demo", "demo@knoldus.com")
+
+  def getAll():List[Student]=List(Student(1, "demo", "demo@knoldus.com"))
+
+}

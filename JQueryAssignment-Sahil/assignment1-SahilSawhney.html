@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>first assignment</title>
+	<link rel="stylesheet" type="text/css" href="cssFiles/newAssignment.css">
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap-theme.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body background="images/WhiteBackground.jpg">
+	<div class="container-fluid">
+
+		<header class="row myHeader">	
+			<img src="images/ScalaSpiral.png" class="logo col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-0 col-xs-12 col-xs-offset-5">		
+			<div class="col-md-10 col-sm-10 col-xs-12">
+				<p class="heading-paragraph">Information Retrival Portal</p>
+			</div>	
+			<img src="images/PlayIcon.png" class="logo col-md-1 col-md-offset-0 col-sm-1 col-sm-offset-0 col-xs-12 col-xs-offset-5">		
+		</header>
+
+		<br><br><br>
+
+		<!-- corousal image -->
+
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>
+			<img id="corrosalImage" class="corrosal-image col-md-8 col-sm-8 col-xs-12" title="" 
+				src="images/scalaFullLogo.png">	
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>				
+		</div>
+	
+		<!-- courosal button -->
+
+		<div class="row">	
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>
+			<button id="corrosalBtn1" class="corrosal-buttons col-md-2 col-sm-4 col-xs-6">Scala</button>
+			<button id="corrosalBtn2" class="corrosal-buttons col-md-2 col-sm-4 col-xs-6">Play</button>
+			<button id="corrosalBtn3" class="corrosal-buttons col-md-2 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-6">Akka</button>
+			<button id="corrosalBtn4" class="corrosal-buttons col-md-2 col-sm-4 col-xs-6">Mongo Db</button>
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>						
+		</div>
+		
+		<br><br><br><br><br>
+
+		<!-- view details on id -->
+
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>
+			<fieldset class="col-md-8 col-sm-8 col-xs-12">
+				<legend><b>View Details On ID. : </b></legend>
+				<div class="row">
+					<label class="col-md-3 col-md-offset-3 col-sm-3 col-sm-offset-3 col-xs-3 col-xs-offset-3">Enter ID. : </label>
+					<input id="getStudentId" type="text" class="col-md-3 col-md-offset-0 col-sm-3 col-sm-offset-0 col-xs-4 col-xs-offset-3">
+				</div>
+				<br><br>
+				<div class="row">
+					<button id="getJson" class="requestButtons col-md-3 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-4 col-xs-offset-3">Get</button>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-md-2 col-sm-2 col-xs-0"></div>
+					<fieldset hidden id="slidingFieldset" class="col-md-8 col-sm-8 col-xs-12">
+						<legend>Result : </legend>	
+						<br>				
+						<div>
+							<div class="row">
+								<label class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 col-xs-4 col-xs-offset-3">Name : </label>
+								<input id="getStudentName" readonly type="text" class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-5 col-xs-offset-3"></input>
+							</div>
+							<br>
+							<div class="row">
+								<label class="col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-2 col-xs-4 col-xs-offset-3">E-Mail : </label>
+								<input id="getStudentEmail" readonly type="text" class="col-md-5 col-md-offset-0 col-sm-5 col-sm-offset-0 col-xs-5 col-xs-offset-3"></input>
+							</div>
+						</div>					
+					</fieldset>
+					<div class="col-md-2 col-sm-2 col-xs-0"></div>
+				</div>
+			</fieldset>
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>				
+		</div>
+
+		<br><br><br>
+
+		<!-- view all details -->
+
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>
+			<fieldset class="col-md-8 col-sm-8 col-xs-12">
+				<legend><b>View All Details : </b></legend>
+				<br>
+				<div class="row">
+					<button id="postJson" class="requestButtons col-md-3 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-4 col-xs-offset-3">Post</button>
+				</div>
+				<br><br>
+
+
+				<div class="row">
+					<div class="col-md-2 col-sm-2 col-xs-0"></div>
+					<div hidden id="slidingTable" class="col-md-8 col-sm-8 col-xs-12" >
+						<table id="allRecordTable" width="100%">
+							<tr>
+								<th>Id.</th>
+								<th>Name</th>
+								<th>E-Mail</th>
+							</tr>						
+						
+						</table>
+					</div>
+					<div class="col-md-2 col-sm-2 col-xs-0"></div>
+				</div>
+
+
+				<br>
+			</fieldset>
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>				
+		</div>
+
+		<br><br>
+
+		<!-- save details -->
+
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>
+			<form class="col-md-8 col-sm-8 col-xs-12">
+				<fieldset>
+					<legend><b>Save Details : </b></legend>
+					<div class="row">
+						<br>
+						<div class="col-md-2 col-sm-2 col-xs-3"></div>
+						<label class="col-md-2 col-sm-2 col-xs-9">ID. : </label>
+						<div class="col-md-2 col-sm-2 col-xs-3"></div>
+						<input id="inputIdSave" class="col-md-4 col-sm-4 col-xs-4" type="text"></input>
+						<div class="col-md-2 col-sm-2 col-xs-0"></div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-2 col-sm-2 col-xs-3"></div>
+						<label class="col-md-2 col-sm-2 col-xs-9">Name : </label>
+						<div class="col-md-2 col-sm-2 col-xs-3"></div>
+						<input id="inputNameSave" class="col-md-4 col-sm-4 col-xs-4" type="text"></input>
+						<div class="col-md-2 col-sm-2 col-xs-0"></div>
+					</div>
+					<br>
+					<div class="row">
+						<div class="col-md-2 col-sm-2 col-xs-3"></div>
+						<label class="col-md-2 col-sm-2 col-xs-9">E-Mail : </label>
+						<div class="col-md-2 col-sm-2 col-xs-3"></div>
+						<input id="inputEmailSave" class="col-md-4 col-sm-4 col-xs-4" type="text"></input>
+						<div class="col-md-2 col-sm-2 col-xs-0"></div>
+					</div>
+				</fieldset>
+			</form>
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>				
+		</div>
+
+		<br><br><br>
+
+		<!-- save button -->
+
+		<div class="row">
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>
+			<div class="col-md-8 col-sm-8 col-xs-12">
+				<button id="saveJson" class="requestButtons col-md-3 col-md-offset-4 col-sm-3 col-sm-offset-4 col-xs-4 col-xs-offset-3">Save</button>
+			</div>
+			<div class="col-md-2 col-sm-2 col-xs-0"></div>								
+		</div>
+
+		<br><br><br>
+
+		<!-- black footer -->
+
+		<footer class="myFooter row">
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<h2><u>Scala Language</u></h2>
+				<br>
+				<p>Scala is an acronym for 'Scalable Language'. This means that Scala grows with you. You can play with it by typing one-line expressions and observing the results. But you can also rely on it for large mission critical systems, as many companies, including Twitter, LinkedIn, or Intel do.</p>
+				<br>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<h2><u>Play Framework</u></h2>
+				<br>
+				<p>Play is a high-productivity Java and Scala web application framework that integrates the components and APIs you need for modern web application development. <br>Play is based on a lightweight, stateless, web-friendly architecture and features predictable and minimal resource consumption (CPU, memory, threads) for highly-scalable applications thanks to its reactive model, based on Iteratee IO.</p>
+				<br>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<h2><u>Akka Framework</u></h2>
+				<br>
+				<p>Akka is a toolkit and runtime for building highly concurrent, distributed, resilient, message-driven applications on the JVM</p>
+				<br>
+			</div>
+			<div class="col-md-3 col-sm-6 col-xs-12">
+				<h2><u>Mongo DB</u></h2>
+				<br>
+				<p>MongoDB is an open source, document-oriented database designed with both scalability and developer agility in mind. Instead of storing your data in tables and rows as you would with a relational database, in MongoDB you store JSON-like documents with dynamic schemas.</p>
+				<br>
+			</div>
+			<br><br>
+		</footer>
+		
+	</div>
+</body>
+
+<script src="javascriptFiles/jquery-2.2.0.min.js"></script>
+<script src="javascriptFiles/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+<script src="javascriptFiles/assignment.min.js"></script>
+
+</html>

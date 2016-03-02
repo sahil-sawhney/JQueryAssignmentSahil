@@ -1,0 +1,50 @@
+.logo {
+  max-height: 100px;
+  max-width: 100px; }
+
+.heading-paragraph {
+  text-align: center;
+  color: white;
+  font-size: 50px; }
+
+.corrosal-image {
+  height: 250px; }
+
+.corrosal-buttons {
+  background-color: #32CD32;
+  border-style: solid;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-size: 18px; }
+
+.requestButtons {
+  background-color: #0077fd;
+  border-style: solid;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 22px; }
+
+.myHeader {
+  background: #1769ff; }
+
+.myFooter {
+  background: black;
+  text-align: justify;
+  color: white;
+  opacity: 0.8; }
+
+h2 {
+  text-align: center; }
+
+table, table th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 18px; }
+
+table th {
+  font-size: 22px; }
+
+/*# sourceMappingURL=newAssignment.css.map */

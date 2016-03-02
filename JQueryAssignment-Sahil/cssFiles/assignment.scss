@@ -1,0 +1,64 @@
+$logo-dimension: 100px;
+$text-color: white;
+$text-allignment: center; 
+$bordr-style: solid;
+
+
+.logo{
+	max-height: $logo-dimension;
+	max-width: $logo-dimension;
+}
+
+.heading-paragraph{
+	text-align: $text-allignment;
+	color: $text-color;
+	font-size: 50px;
+}
+
+.corrosal-image{
+	height: 250px;
+}
+
+.corrosal-buttons{
+	background-color: #32CD32;
+    border-style: $bordr-style;
+    color: $text-color;
+    padding: 5px;
+    text-align: $text-allignment;
+    font-size: 18px;
+}
+
+.requestButtons{
+	background-color: #0077fd;
+	border-style: $bordr-style;
+	color: $text-color;
+	padding: 10px;
+	text-align:$text-allignment;
+	font-size: 22px;
+}
+
+.myHeader{
+	background:#1769ff
+}
+
+.myFooter{
+	background:black;
+	text-align: justify;
+	color: $text-color;
+	opacity: 0.8;
+}
+
+h2{
+	text-align: $text-allignment;
+}
+
+table,table th, td {
+    border: 1px $bordr-style black;
+    border-collapse: collapse;
+    text-align: $text-allignment;
+    font-size: 18px;
+}
+
+table th{
+	font-size: 22px;
+}
